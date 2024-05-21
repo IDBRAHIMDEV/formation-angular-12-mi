@@ -11,6 +11,8 @@ import { SidebarComponent } from './components/site/sidebar/sidebar.component';
 import { ListOfUsersComponent } from './components/site/list-of-users/list-of-users.component';
 import { ListOfProductsComponent } from './components/site/list-of-products/list-of-products.component';
 import { ProductCardComponent } from './components/site/product-card/product-card.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ProductCardComponent } from './components/site/product-card/product-car
     SidebarComponent,
     ListOfUsersComponent,
     ListOfProductsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
