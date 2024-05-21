@@ -13,7 +13,9 @@ import { ListOfProductsComponent } from './components/site/list-of-products/list
 import { ProductCardComponent } from './components/site/product-card/product-card.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { FormsModule } from '@angular/forms';
-
+import { UsersComponent } from './components/users/users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserCardComponent } from './components/user-card/user-card.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +27,15 @@ import { FormsModule } from '@angular/forms';
     ListOfUsersComponent,
     ListOfProductsComponent,
     ProductCardComponent,
-    CoursesComponent
+    CoursesComponent,
+    UsersComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

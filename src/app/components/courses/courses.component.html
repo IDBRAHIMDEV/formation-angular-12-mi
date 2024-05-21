@@ -19,10 +19,20 @@
             <button *ngIf="!editable" (click)="addCourse()" class="btn btn-success mt-2">Add</button>
         </div>
         <ul class="my-4 list-group">
-            <li *ngFor="let course of courses; index as i, odd as o, even as e, first as f, last as l, count as c" class="list-group-item">{{ course }} 
+            <li *ngFor="let course of courses; index as i, odd as o, even as e, first as f, last as l, count as c" class="list-group-item"
+             [ngClass]="{
+                'list-group-item-warning': e,
+                'list-group-item-success': o
+             }"
+
+             [ngStyle]="{
+                color: f ? 'red' : 'yellow',
+                fontSize: l ? '20px': '10px'
+             }"
+            >{{ course }} 
               <div class="my-2 text-end">
-                <button class="btn btn-danger btn-sm">Delete</button>
-                <button class="btn btn-sm btn-warning ms-2" (click)="editCourse(course)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteCourse(course, i)">Delete</button>
+                <button class="btn btn-sm btn-warning ms-2" (click)="editCourse(course, i)">Edit</button>
             </div>
             </li>
         </ul>
