@@ -24,4 +24,8 @@ export class UsersComponent implements OnInit {
     })
   }
 
+  deleteUser(data: any) {
+    console.log('delete user from a parent', data)
+  }
+
 }

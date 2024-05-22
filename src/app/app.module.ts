@@ -15,7 +15,13 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './components/users/users.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UserCardComponent } from './components/user-card/user-card.component'
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ListProductsComponent } from './pages/products/list-products/list-products.component';
+import { AddProductComponent } from './pages/products/add-product/add-product.component';
+import { EditProductComponent } from './pages/products/edit-product/edit-product.component';
+import { ViewProductComponent } from './pages/products/view-product/view-product.component';
+import { HomeComponent } from './pages/home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,13 @@ import { UserCardComponent } from './components/user-card/user-card.component'
     ProductCardComponent,
     CoursesComponent,
     UsersComponent,
-    UserCardComponent
+    UserCardComponent,
+    ProductsComponent,
+    ListProductsComponent,
+    AddProductComponent,
+    EditProductComponent,
+    ViewProductComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
